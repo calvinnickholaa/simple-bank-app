@@ -11,11 +11,9 @@ import (
 
 const createAccount = `-- name: CreateAccount :one
 INSERT INTO account (
-  owner,
-  balance,
-  currency
+owner, balance,currency
 ) VALUES (
-  $1, $2, $3
+$1, $2, $3
 )
 RETURNING id, owner, balance, currency, created_at
 `
